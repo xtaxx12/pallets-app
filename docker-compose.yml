@@ -4,8 +4,8 @@ services:
   db:
     image: postgres:15
     environment:
-      POSTGRES_DB: palletsdb
-      POSTGRES_USER: palletsuser
+      POSTGRES_DB: pallets_db
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: joelrojas123
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -18,17 +18,19 @@ services:
       dockerfile: Dockerfile
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./backend:/app
+      - .:/app  
+      - /app/pallets_app/static 
     ports:
       - "8000:8000"
     depends_on:
       - db
     environment:
+      - PYTHONPATH=/app
       - DEBUG=True
       - DJANGO_SETTINGS_MODULE=backend.settings
-      - DB_NAME=palletsdb
-      - DB_USER=palletsuser
-      - DB_PASSWORD=palletspass
+      - DB_NAME=pallets_db
+      - DB_USER=postgres
+      - DB_PASSWORD=joelrojas123
       - DB_HOST=db
       - DB_PORT=5432
 
@@ -39,8 +41,8 @@ services:
     volumes:
       - ./frontend:/app
     ports:
-      - "5173:5173"
-    command: npm run dev
+      - "3000:3000"
+    command: npm start
     depends_on:
       - backend
 

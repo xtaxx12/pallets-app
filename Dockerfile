@@ -11,10 +11,10 @@ COPY backend/requirements.txt .
 # Instalar dependencias
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copiar el proyecto
+# Copiar el proyecto completo
 COPY backend /app
 
-# Exponer el puerto
+# Exponer el puerto del servidor
 EXPOSE 8000
 
 # Comando por defecto
