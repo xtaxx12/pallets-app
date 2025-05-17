@@ -95,14 +95,11 @@ docker-compose up -d
 
 ---
 
-## 🖼️ Capturas (opcional)
+## 🖼️ Capturas 
 
-<!--
-Agrega aquí imágenes como:
+![Lista de Pallets](./screenshots/image.png)
+![Modal de Edicion](./screenshots/image1.png)
 
-![Lista de Pallets](./screenshots/lista.png)
-![Formulario de Pallet](./screenshots/formulario.png)
--->
 
 ---
 
