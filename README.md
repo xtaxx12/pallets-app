@@ -40,7 +40,7 @@ Aplicación web para registrar, listar, editar y controlar la recepción de pall
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/pallets-app.git
+git clone https://github.com/xtaxx12/pallets-app.git
 cd pallets-app
 ```
 
